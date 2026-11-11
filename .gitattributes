@@ -1,0 +1,16 @@
+# Line endings decide a file's hash. A Windows clone with core.autocrlf and no rule here gets CRLF
+# while a Linux clone gets LF, and `sha256sum -c` then disagrees about the same content.
+# These rules are depth-independent, so they still apply when this directory IS the repository root
+# (which is how it is published).
+*.py text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+LICENSE text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+SHA256SUMS text eol=lf
+MANIFEST.sha256 text eol=lf
+
+# The archive is a zip; no text rule may touch it.
+*.zip binary

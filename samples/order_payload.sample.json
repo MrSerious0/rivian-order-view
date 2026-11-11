@@ -1,0 +1,313 @@
+{
+ "_comment": "SYNTHETIC payload for rivian_order_view.py --from-json. Every identifier here is invented; no real order, VIN, address or person is represented. Shape mirrors a real --json dump: {order, delivery, checklist, vin_decode}.",
+ "tool": "rivian_order_view",
+ "version": "2.0.1",
+ "generated_at": "2027-02-09T21:30:00-05:00",
+ "snapshots": [
+  {
+   "id": "1000000001",
+   "state": "ORDERED",
+   "configurationStatus": "SOFT_LOCKED",
+   "fulfillmentSummaryStatus": "PENDING_FULFILLMENT",
+   "vehicleId": "01-000000001",
+   "vin": "7PD2EAAB4VN000001"
+  }
+ ],
+ "order": {
+  "id": "1000000001",
+  "orderDate": "2026-11-20T09:30:00",
+  "state": "ORDERED",
+  "type": "VEHICLE",
+  "currency": "USD",
+  "total": 58802.9,
+  "subtotal": 51990.0,
+  "discountTotal": 0.0,
+  "taxTotal": 3639.3,
+  "feesTotal": 3173.6,
+  "paidTotal": 500.0,
+  "remainingTotal": 58302.9,
+  "outstandingBalance": 0.0,
+  "costAfterCredits": 58802.9,
+  "orderCancelDate": null,
+  "vin": null,
+  "vehicleId": "01-000000001",
+  "configurationStatus": "SOFT_LOCKED",
+  "fulfillmentSummaryStatus": "PENDING_FULFILLMENT",
+  "orderEmail": "example-owner@example.com",
+  "locale": "en-US",
+  "storeId": "STORE-EXAMPLE",
+  "billingAddress": {
+   "firstName": "Example",
+   "lastName": "Owner",
+   "line1": "1 Example Way",
+   "line2": null,
+   "city": "Exampleville",
+   "state": "IN",
+   "country": "US",
+   "postalCode": "46000"
+  },
+  "shippingAddress": {
+   "firstName": "Example",
+   "lastName": "Owner",
+   "line1": "1 Example Way",
+   "line2": null,
+   "city": "Exampleville",
+   "state": "IN",
+   "country": "US",
+   "postalCode": "46000"
+  },
+  "vehicle": {
+   "vehicleId": "01-000000001",
+   "vin": "7PD2EAAB4VN000001",
+   "modelYear": 2027,
+   "model": "R2",
+   "make": "Rivian",
+   "plannedBuildDate": "2027-01-15",
+   "expectedBuildDate": "2026-12-20",
+   "actualGeneralAssemblyDate": "2027-01-12",
+   "expectedGeneralAssemblyStartDate": "2027-01-15",
+   "status": "VEHICLE_PREPPED"
+  },
+  "tradeIns": [],
+  "payments": [
+   {
+    "id": "pay-1",
+    "amount": 500.0,
+    "status": "SUCCEEDED",
+    "method": "CARD",
+    "type": "DEPOSIT",
+    "intent": "DEPOSIT",
+    "date": "2026-11-20T09:35:00"
+   },
+   {
+    "id": "pay-2",
+    "amount": 58302.9,
+    "status": "PROCESSING",
+    "method": "ACH",
+    "type": "BALANCE",
+    "intent": "PURCHASE",
+    "date": "2027-01-28T09:14:00"
+   }
+  ],
+  "items": [
+   {
+    "id": "item-1",
+    "title": "Rivian R2",
+    "type": "VEHICLE",
+    "sku": "R2-PERF",
+    "quantity": 1,
+    "unitPrice": 51790.0,
+    "state": "ORDERED",
+    "configuration": {
+     "options": [
+      {
+       "optionId": "opt-1",
+       "optionName": "Forest Green",
+       "groupId": "PAINT"
+      },
+      {
+       "optionId": "opt-2",
+       "optionName": "Black Crater Signature",
+       "groupId": "INT"
+      },
+      {
+       "optionId": "opt-3",
+       "optionName": "21\" All-Season",
+       "groupId": "WHL"
+      },
+      {
+       "optionId": "opt-4",
+       "optionName": "Launch Package",
+       "groupId": "LPKG"
+      },
+      {
+       "optionId": "opt-5",
+       "optionName": "Tow Hooks",
+       "groupId": "TOW"
+      }
+     ]
+    },
+    "fees": {
+     "total": 3173.6,
+     "items": [
+      {
+       "description": "Current Year Vehicle Excise Tax",
+       "amount": 532.0,
+       "code": "CURRENT_YEAR_VEHICLE_EXCISE_TAX"
+      },
+      {
+       "description": "Current Year County Excise Tax",
+       "amount": 25.0,
+       "code": "CURRENT_YEAR_COUNTY_EXCISE_TAX"
+      },
+      {
+       "description": "Prior Year Vehicle Excise Tax",
+       "amount": 399.0,
+       "code": "PRIOR_YEAR_VEHICLE_EXCISE_TAX"
+      },
+      {
+       "description": "Prior Year County Excise Tax",
+       "amount": 18.75,
+       "code": "PRIOR_YEAR_COUNTY_EXCISE_TAX"
+      },
+      {
+       "description": "Transport Infrastructure Improvement",
+       "amount": 15.0,
+       "code": "TRANSPORT_INFRAST_IMPROVEMENT"
+      },
+      {
+       "description": "Passenger motor vehicle registration",
+       "amount": 21.35,
+       "code": "PASS_MOTOR_VEH_REG"
+      },
+      {
+       "description": "Electric vehicle supplemental",
+       "amount": 242.0,
+       "code": "ELECTRIC_VEHICLE_SUPPLEMENTAL"
+      },
+      {
+       "description": "Registration/plate transfer",
+       "amount": 9.5,
+       "code": "REGISTRATION_PLATE_TRANSFER"
+      },
+      {
+       "description": "Title",
+       "amount": 15.0,
+       "code": "TITLE_FEE"
+      },
+      {
+       "description": "Destination",
+       "amount": 1495.0,
+       "code": "DELIVERY_FEE"
+      },
+      {
+       "description": "Documentation fee",
+       "amount": 377.0,
+       "code": "DOCUMENTATION_FEE"
+      },
+      {
+       "description": "Battery state of charge at delivery",
+       "amount": 24.0,
+       "code": "EXAMPLE_EXTRA_LINE"
+      }
+     ]
+    },
+    "taxes": {
+     "total": 3625.3,
+     "items": [
+      {
+       "description": "IN Sales Tax / Use Tax",
+       "amount": 3625.3,
+       "code": "IN_SALES_TAX_USE_TAX",
+       "rate": null,
+       "type": "StateTax"
+      },
+      {
+       "description": "Trade-in tax credit",
+       "amount": 0.0,
+       "code": "TRADE_IN_TAX_CREDIT",
+       "rate": null,
+       "type": "Adjustment"
+      }
+     ]
+    }
+   },
+   {
+    "id": "item-2",
+    "title": "R2 Cargo Cover",
+    "type": "ACCESSORY",
+    "sku": "ACC-COVER",
+    "quantity": 1,
+    "unitPrice": 200.0,
+    "state": "ORDERED",
+    "configuration": {
+     "options": []
+    },
+    "fees": null,
+    "taxes": {
+     "total": 14.0,
+     "items": [
+      {
+       "description": "Total Taxes",
+       "amount": 14.0,
+       "code": "TOTAL_TAXES",
+       "rate": 0.07,
+       "type": "TotalTax"
+      }
+     ]
+    }
+   }
+  ],
+  "fulfillmentInfo": {
+   "fulfillments": [
+    {
+     "fulfillmentId": "ful-1",
+     "fulfillmentStatus": "FULFILLED",
+     "fulfillmentMethod": "TO_BE_DETERMINED",
+     "fulfillmentVendor": "RIVIAN",
+     "tracking": null,
+     "estimatedDeliveryWindow": null
+    },
+    {
+     "fulfillmentId": "ful-2",
+     "fulfillmentStatus": "FULFILLED",
+     "fulfillmentMethod": "SHIP_TO_CUSTOMER",
+     "fulfillmentVendor": "RIVIAN",
+     "tracking": {
+      "status": "DELIVERED",
+      "carrier": "N/A",
+      "number": "EXAMPLE0000000001",
+      "url": null,
+      "shipDate": "2027-02-01T08:00:00",
+      "deliveredDate": "2027-02-03T17:12:44",
+      "serviceType": "N/A"
+     },
+     "estimatedDeliveryWindow": {
+      "startDate": "2027-01-30",
+      "endDate": "2027-02-04"
+     }
+    }
+   ],
+   "pendingFulfillmentItems": []
+  }
+ },
+ "delivery": {
+  "http": 200,
+  "error": null,
+  "data": {
+   "status": "DELIVERY_ACCEPTED",
+   "carrier": "THIRD_PARTY",
+   "vehicleVIN": "7PD2EAAB4VN000001",
+   "appointmentDetails": {
+    "appointmentId": "appt-example-0001",
+    "startDateTime": "2027-02-06T10:30:00",
+    "endDateTime": "2027-02-06T10:45:00",
+    "timeZone": "America/Indiana/Indianapolis"
+   },
+   "deliveryAddress": {
+    "addressLine1": "100 Example Delivery Rd",
+    "addressLine2": null,
+    "city": "Exampleville",
+    "state": "IN",
+    "zipcode": "46000"
+   }
+  }
+ },
+ "checklist": {
+  "http": 503,
+  "error": null,
+  "data": null
+ },
+ "vin_decode": {
+  "Make": "RIVIAN",
+  "Model": "R2",
+  "ModelYear": "2027",
+  "Trim": "Performance",
+  "DriveType": "AWD",
+  "PlantCity": "Normal",
+  "PlantState": "ILLINOIS",
+  "BodyClass": "Sport Utility Vehicle (SUV)/Multi-Purpose Vehicle (MPV)",
+  "ElectrificationLevel": "BEV (Battery Electric Vehicle)",
+  "Manufacturer": "RIVIAN AUTOMOTIVE, LLC"
+ }
+}

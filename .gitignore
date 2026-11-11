@@ -1,0 +1,22 @@
+# What this tool writes is personal data: the page carries your VIN, order id, delivery address and
+# shipment tracking numbers, and the `--json` dump carries all of that plus the delivery address and
+# the order email. Committed by accident, they are in a git history forever.
+#
+# Defaults the tool itself writes (rivian_order_view.html, and whatever you pass to --json), plus
+# the names this project's own docs and test suite use, so a copy-pasted command cannot leave a
+# personal page staged.
+rivian_order_view*.html
+rivian_order_view*.json
+report.html
+report.json
+out.html
+out.json
+
+# The synthetic pages and payloads under samples/ are tracked on purpose — they are the fixture.
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

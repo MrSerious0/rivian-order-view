@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.3 — 2026-11-11
+
+Documentation polish only: a missing paragraph break in *Sharing what it produces*, and the token
+cache's file mode was stated three times in the privacy list — it now appears once, where it means
+something. `package/README.md` also gained the Windows equivalent of the checksum check.
+
 ## 2.0.2 — 2026-11-11
 
 Two stale strings inside the release that shipped as 2.0.1. No behaviour change.

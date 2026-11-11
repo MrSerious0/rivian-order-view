@@ -22,9 +22,13 @@ git show HEAD:package/rivian_order_view_2.0.1.zip > rivian_order_view.zip
 ## Verify before trusting it
 
 ```bash
+cd package
 grep rivian_order_view_2.0.1.zip SHA256SUMS | sha256sum -c -
 # rivian_order_view_2.0.1.zip: OK
 ```
+
+(`sha256sum -c` resolves the name in `SHA256SUMS` against the current directory, which is why that
+`cd` is there — the file lists a bare filename.)
 
 That proves the file you have is the file that was published. To check the **contents**, the
 archive carries a manifest listing a hash for every file in it (every file but itself):

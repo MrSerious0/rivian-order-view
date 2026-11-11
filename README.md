@@ -7,7 +7,7 @@ self-contained HTML page you can keep, screenshot or share.
 It answers questions like: *has my car been built? what's my VIN? did it pass the factory gate?
 when is my pickup, and where? how much have I paid and what exactly is in the fees?*
 
-**Version 2.0.1** · MIT licensed · Python 3.8+ · standard library only · read-only · unofficial.
+**Version 2.0.2** · MIT licensed · Python 3.8+ · standard library only · read-only · unofficial.
 
 ## Requirements
 
@@ -191,7 +191,7 @@ that as "not built yet" when a VIN and an actual build date are present.
 * **Read-only.** It mints a CSRF token, logs in, and reads. It cannot lock/unlock, start
   charging, or change anything on the account.
 * **Your password is never stored** — not on disk, not in the HTML, not in the JSON dump.
-* **Session tokens are cached** in `~/.rivian_order_view/tokens.json`, mode `0600`, so repeat
+* **Session tokens are cached** in `~/.rivian_order_view/tokens.json`, mode `0600` on POSIX, so repeat
   runs skip the login. Delete that folder to forget the session.
 * **Nothing is sent anywhere except `rivian.com`** (plus the optional public NHTSA VIN decode,
   which `--no-vin-decode` removes). No telemetry, no third-party service.

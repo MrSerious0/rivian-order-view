@@ -65,9 +65,9 @@ def build():
     out = DIST / "rivian_order_view_{}.zip".format(version())
 
     # The payload bytes, line endings normalised so a CRLF checkout and an LF one carry the same
-    # content. (That does NOT make the zip byte-identical across platforms — the container records
-    # the builder's platform and zlib's output varies by version. The manifest below is the check
-    # that survives that, and the README says so.)
+    # content. (That does NOT make the zip byte-identical across toolchains — the platform id is
+    # pinned below, but zlib's output varies with the zlib a given Python is built against. The
+    # manifest is the check that survives that, and the README says so.)
     payload = {}
     for rel in sorted(PAYLOAD):
         payload[rel] = (HERE / rel).read_bytes().replace(b"\r\n", b"\n")

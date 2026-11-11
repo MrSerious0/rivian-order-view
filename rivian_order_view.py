@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""rivian_order_view.py — see the real status of your own Rivian order. v2.0.1
+"""rivian_order_view.py — see the real status of your own Rivian order. v2.0.2
 
 What it shows
 -------------
@@ -94,7 +94,7 @@ import urllib.parse
 import urllib.request
 import uuid
 
-VERSION = "2.0.1"
+VERSION = "2.0.2"
 
 GATEWAY = "https://rivian.com/api/gql/gateway/graphql"
 ORDERS = "https://rivian.com/api/gql/orders/graphql/"

@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.0.2 — 2026-11-11
+
+Two stale strings inside the release that shipped as 2.0.1. No behaviour change.
+
+* `make_dist.py`'s own comment still blamed the zip container for recording the builder's platform,
+  twelve lines above the `create_system = 3` that stops it doing so. A reader comparing the file to
+  its behaviour would have found the code right and the comment wrong.
+* The README's token-cache bullet said `mode 0600` while the bullet two below it said, correctly,
+  `0600 on POSIX` and that Windows has no equivalent mode.
+
+The version moves because the archive's contents change: the same version number with two
+different SHA-256s would break the one thing `SHA256SUMS` is for.
+
 ## 2.0.1 — 2026-11-10
 
 A packaging and console fix made before the tool went to anyone outside this machine. No change to

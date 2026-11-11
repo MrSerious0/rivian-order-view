@@ -1,10 +1,10 @@
 # package — the shippable artifact
 
-`rivian_order_view_2.0.1.zip` is the distributable form of the tool in the parent directory: the
+`rivian_order_view_2.0.2.zip` is the distributable form of the tool in the parent directory: the
 same files, zipped reproducibly, so a person can fetch one file instead of cloning the repo.
 
 ```
-rivian_order_view_2.0.1.zip     sha256 recorded in SHA256SUMS
+rivian_order_view_2.0.2.zip     sha256 recorded in SHA256SUMS
 SHA256SUMS                      one line: <sha256>  <filename>
 ```
 
@@ -14,7 +14,7 @@ The archive is committed in the repository beside this file, so a clone already 
 
 ```bash
 # from the root of a clone of the repository that publishes this file
-git show HEAD:package/rivian_order_view_2.0.1.zip > rivian_order_view.zip
+git show HEAD:package/rivian_order_view_2.0.2.zip > rivian_order_view.zip
 ```
 
 (If you received the file directly, skip this — you already have it.)
@@ -23,8 +23,8 @@ git show HEAD:package/rivian_order_view_2.0.1.zip > rivian_order_view.zip
 
 ```bash
 cd package
-grep rivian_order_view_2.0.1.zip SHA256SUMS | sha256sum -c -
-# rivian_order_view_2.0.1.zip: OK
+grep rivian_order_view_2.0.2.zip SHA256SUMS | sha256sum -c -
+# rivian_order_view_2.0.2.zip: OK
 ```
 
 (`sha256sum -c` resolves the name in `SHA256SUMS` against the current directory, which is why that
@@ -34,7 +34,7 @@ That proves the file you have is the file that was published. To check the **con
 archive carries a manifest listing a hash for every file in it (every file but itself):
 
 ```bash
-unzip -q rivian_order_view_2.0.1.zip
+unzip -q rivian_order_view_2.0.2.zip
 cd rivian_order_view_share && sha256sum -c MANIFEST.sha256
 ```
 
